@@ -36,7 +36,7 @@ export const listProducts =
         type: PRODUCT_LIST_REQUEST,
       });
 
-      const { data } = await axios.get(`/api/products${keyword}`);
+      const { data } = await axios.get(`https://backendecomsecond.onrender.com/api/products${keyword}`);
 
       dispatch({
         type: PRODUCT_LIST_SUCCESS,
@@ -60,7 +60,7 @@ export const listProductDetails = (id) => async (dispatch) => {
       type: PRODUCT_DETAILS_REQUEST,
     });
 
-    const { data } = await axios.get(`/api/products/${id}`);
+    const { data } = await axios.get(`https://backendecomsecond.onrender.com/api/products/${id}`);
 
     dispatch({
       type: PRODUCT_DETAILS_SUCCESS,
@@ -99,7 +99,7 @@ export const deleteProduct = (id) => async (dispatch, getState) => {
     
     /* API method to delete the product */
     // eslint-disable-next-line
-    const { data } = await axios.delete(`https://deployanimeeecom.onrender.com/api/products/delete/${id}/`, config);
+    const { data } = await axios.delete(`https://backendecomsecond.onrender.com/api/products/delete/${id}/`, config);
 
     /* dispatch&send payload to the reducer after a successfull get request */
     dispatch({
@@ -138,7 +138,7 @@ export const createProduct = () => async (dispatch, getState) => {
 
    
     /* API method to create the new product requested at line 120 */
-    const { data } = await axios.post(`https://deployanimeeecom.onrender.com/api/products/create/`, {}, config);
+    const { data } = await axios.post(`https://backendecomsecond.onrender.com/api/products/create/`, {}, config);
 
    
       /* dispatch&send payload to the reducer after a successfull post request */
@@ -179,7 +179,7 @@ export const updateProduct = (product) => async (dispatch, getState) => {
 
     /* API method to update the product */
     const { data } = await axios.put(
-      `https://deployanimeeecom.onrender.com/api/products/update/${product._id}/`,
+      `https://backendecomsecond.onrender.com/api/products/update/${product._id}/`,
       product,
       config
     );
@@ -231,7 +231,7 @@ export const createProductReview =
 
       /* API method to create the product review */
       const { data } = await axios.post(
-        `https://deployanimeeecom.onrender.com/api/products/${productId}/reviews/`,
+        `https://backendecomsecond.onrender.com/api/products/${productId}/reviews/`,
         review,
         config
       );
@@ -260,7 +260,7 @@ export const listTopProducts = () => async (dispatch) => {
       type: PRODUCT_TOP_REQUEST,
     });
 
-    const { data } = await axios.get(`/api/products/top/`);
+    const { data } = await axios.get(`https://backendecomsecond.onrender.com/api/products/top/`);
 
     dispatch({
       type: PRODUCT_TOP_SUCCESS,
