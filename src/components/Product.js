@@ -12,7 +12,7 @@ import Rating from "./Rating";
 function Product({ product }) {
   return (
     <Card className="my-3 p-3 rounded">
-      <Link to={`/product/${product._id}`}>
+      <Link to={`https://deployanimeeecom.onrender.com/product/${product._id}`}>
         <Card.Img src={product.image} />
       </Link>
 
