@@ -1,6 +1,5 @@
 {  
   "name": "frontend",
-  "proxy": "https://backendecomsecond.onrender.com",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
