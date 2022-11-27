@@ -49,7 +49,7 @@ export const createOrder = (order) => async (dispatch, getState) => {
 
 
     /* API method to save the order details */
-    const { data } = await axios.post(`https://backendecomsecond.onrender.com/api/orders/add/`, order, config);
+    const { data } = await axios.post(`https://deployanimeeecom.onrender.com/api/orders/add/`, order, config);
 
     
      /* dispatch and payload sent to the reducer after a succesfull request  */
@@ -100,7 +100,7 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
 
   
      /* API method to get the order details */
-    const { data } = await axios.get(`https://backendecomsecond.onrender.com/api/orders/${id}/`, config);
+    const { data } = await axios.get(`https://deployanimeeecom.onrender.com/api/orders/${id}/`, config);
 
     /* dispatch&send payload to the reducer after a successfull get request */
     dispatch({
@@ -141,7 +141,7 @@ export const payOrder = (id, paymentResult) => async (dispatch, getState) => {
    
      /* API method to save the order details */
     const { data } = await axios.put(
-      `https://backendecomsecond.onrender.com/api/orders/${id}/pay/`,
+      `https://deployanimeeecom.onrender.com/api/orders/${id}/pay/`,
       paymentResult,
       config
     );
@@ -184,7 +184,7 @@ export const listMyOrders = () => async (dispatch, getState) => {
     };
 
     /* API method to get the order details */
-    const { data } = await axios.get(`https://backendecomsecond.onrender.com/api/orders/myorders/`, config);
+    const { data } = await axios.get(`https://deployanimeeecom.onrender.com/api/orders/myorders/`, config);
 
     /* dispatch&send payload to the reducer after a successfull get request */
     dispatch({
@@ -224,7 +224,7 @@ export const listOrders = () => async (dispatch, getState) => {
 
     
      /* API method to get the order details made by all of the users */
-    const { data } = await axios.get(`https://backendecomsecond.onrender.com/api/orders/`, config);
+    const { data } = await axios.get(`https://deployanimeeecom.onrender.com/api/orders/`, config);
 
     /* dispatch&send payload to the reducer after a successfull get request */
     dispatch({
@@ -265,7 +265,7 @@ export const deliverOrder = (order) => async (dispatch, getState) => {
    
     /* API method to update the order delivery status */
     const { data } = await axios.put(
-      `https://backendecomsecond.onrender.com/api/orders/${order._id}/deliver/`,
+      `https://deployanimeeecom.onrender.com/api/orders/${order._id}/deliver/`,
       {},
       config
     );
