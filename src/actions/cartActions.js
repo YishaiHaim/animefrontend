@@ -17,7 +17,7 @@ import {
 export const addToCart = (id, qty) => async (dispatch, getState) => {
  
    // fetches the product data using axios
-  const { data } = await axios.get(`https://backendecomsecond.onrender.com/api/products/${id}`);
+  const { data } = await axios.get(`https://deployanimeeecom.onrender.com/api/products/${id}`);
 
   dispatch({
     type: CART_ADD_ITEM,
