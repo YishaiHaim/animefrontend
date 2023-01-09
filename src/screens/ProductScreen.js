@@ -91,7 +91,7 @@ function ProductScreen({ match, history }) {
         <div>
           <Row>
             <Col md={6}>
-              <Image src={`https://deployanimeeecom.onrender.com${product.image}`}  alt={product.name} fluid />
+              <Image src={`https://deployanimeecom-lt0t.onrender.com${product.image}`}  alt={product.name} fluid />
             </Col>
 
             <Col md={3}>
