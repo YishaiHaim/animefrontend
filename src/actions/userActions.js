@@ -216,7 +216,7 @@ export const updateUserProfile = (user) => async (dispatch, getState) => {
     };
 
     // USING ${id} BECAUSE WHILE ACCESSING NORMAL USER WE'LL PASS STRING 'profile' BUT WHILE ACCESSING ADMIN PANEL WE'LL PASS THE 'id' SO LINK HAS TO BE DYNAMIC
-    const { data } = await axios.put(`https://deployanimeeecom.onrender.com/api/users/profile/update`, user, config);
+    const { data } = await axios.put(`https://deployanimeecom-lt0t.onrender.com/api/users/profile/update`, user, config);
 
    /* dispatch&send payload to the reducer after a successfull put request */
     dispatch({
