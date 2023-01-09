@@ -49,7 +49,7 @@ export const login = (email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      "https://deployanimeeecom.onrender.com/api/users/login/",
+      "https://deployanimeecom-lt0t.onrender.com/api/users/login/",
       { username: email, password: password },
       config
     );
@@ -118,7 +118,7 @@ export const register = (name, email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      "https://deployanimeeecom.onrender.com/api/users/register/",
+      "https://deployanimeecom-lt0t.onrender.com/api/users/register/",
       { name: name, email: email, password: password },
       config
     );
@@ -175,7 +175,7 @@ export const getUserDetails = (id) => async (dispatch, getState) => {
     };
 
     // USING ${id} BECAUSE WHILE ACCESSING NORMAL USER WE'LL PASS STRING 'profile' BUT WHILE ACCESSING ADMIN PANEL WE'LL PASS THE 'id' SO LINK HAS TO BE DYNAMIC
-    const { data } = await axios.get(`https://deployanimeeecom.onrender.com/api/users/${id}/`, config);
+    const { data } = await axios.get(`https://deployanimeecom-lt0t.onrender.com/api/users/${id}/`, config);
 
     /* dispatch&send payload to the reducer after a successfull get request */
     dispatch({
@@ -267,7 +267,7 @@ export const listUsers = () => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get(`https://deployanimeeecom.onrender.com/api/users/`, config);
+    const { data } = await axios.get(`https://deployanimeecom-lt0t.onrender.com/api/users/`, config);
 
     dispatch({
       type: USER_LIST_SUCCESS,
@@ -306,7 +306,7 @@ export const deleteUser = (id) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.delete(`https://deployanimeeecom.onrender.com/api/users/delete/${id}`, config);
+    const { data } = await axios.delete(`https://deployanimeecom-lt0t.onrender.com/api/users/delete/${id}`, config);
 
     dispatch({
       type: USER_DELETE_SUCCESS,
@@ -346,7 +346,7 @@ export const updateUser = (user) => async (dispatch, getState) => {
     };
 
     const { data } = await axios.put(
-      `https://deployanimeeecom.onrender.com/api/users/update/${user._id}/`,
+      `https://deployanimeecom-lt0t.onrender.com/api/users/update/${user._id}/`,
       user,
       config
     );
