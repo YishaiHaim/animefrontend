@@ -36,7 +36,7 @@ function ProductCarousel() {
       {products.map((product) => (
         <Carousel.Item key={product._id}>
           <Link to={`/product/${product._id}`}>
-            <Image src={`https://deployanimeeecom.onrender.com${product.image}`} alt={product.name} fluid />
+            <Image src={`https://deployanimeecom-lt0t.onrender.com${product.image}`} alt={product.name} fluid />
 
             <Carousel.Caption className="carousel.caption">
               <h4>
